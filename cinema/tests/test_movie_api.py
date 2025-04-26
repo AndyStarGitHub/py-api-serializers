@@ -79,6 +79,8 @@ class MovieApiTests(TestCase):
         self.assertEqual(response.data["title"], "Titanic")
         self.assertEqual(response.data["description"], "Titanic description")
         self.assertEqual(response.data["duration"], 123)
+        print(response.data["genres"][0])
+        print(response.data["genres"][0]["name"])
         self.assertEqual(response.data["genres"][0]["name"], "Drama")
         self.assertEqual(response.data["genres"][1]["name"], "Comedy")
         self.assertEqual(response.data["actors"][0]["first_name"], "Kate")
