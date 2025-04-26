@@ -93,7 +93,7 @@ class MovieSessionListSerializer(MovieSessionSerializer):
     cinema_hall = serializers.SlugRelatedField(
         many=False,
         read_only=True,
-        slug_field=("name")
+        slug_field="name"
     )
     movie = serializers.SlugRelatedField(
         many=False,
